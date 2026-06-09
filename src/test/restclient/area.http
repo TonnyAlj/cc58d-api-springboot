@@ -1,0 +1,37 @@
+#Testes Com Areas
+
+@base = http://localhost:8080/area
+
+### Obter um area
+GET {{base}}/2
+
+###Obter todos os areas
+GET {{base}}
+
+###Obter areas por nome
+GET {{base}}/name/Fazenda Voltina
+
+###Criar um area
+POST {{base}}
+Content-Type: application/json
+
+{
+    "nome": "Fazenda Dona Ana",
+    "descricao": "Area 05",
+    "areaHectares": 250.0
+
+}
+
+### Atualizar um usuario
+PUT {{base}}/15
+Content-Type: application/json
+
+{
+    "nome": "Fazenda Voltina",
+    "descricao": "Area 01",
+    "areaHectares": 150.0
+
+}
+
+###Deletar um usuario
+DELETE {{base}}/1

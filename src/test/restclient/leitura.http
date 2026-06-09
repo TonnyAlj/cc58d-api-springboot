@@ -1,0 +1,39 @@
+#Testes Com Leituras
+
+@base = http://localhost:8080/leitura
+
+### Obter uma leitura
+GET {{base}}/1
+
+###Obter todas as leituras
+GET {{base}}
+
+###Obter leituras por nome
+GET {{base}}/name/ana?size=1&page=2&sort=name,asc
+
+###Criar uma leitura
+POST {{base}}
+Content-Type: application/json
+
+{
+    "name": "Antonio Carlos",
+    "email": "antoniocarlos@gmail.com",
+    "password": "123456",
+    "birth": "1995-08-25"
+
+}
+
+### Atualizar uma leitura
+PUT {{base}}/15
+Content-Type: application/json
+
+{
+    "name": "Antonio Olimpio",
+    "email": "netinhoalj@gmail.com",
+    "password": "123456",
+    "birth": "1992-03-25"
+
+}
+
+###Deletar uma leitura
+DELETE {{base}}/1

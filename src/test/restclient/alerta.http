@@ -1,0 +1,39 @@
+#Testes Com Alertas
+
+@base = http://localhost:8080/alerta
+
+### Obter um alerta
+GET {{base}}/1
+
+###Obter todos os alertas
+GET {{base}}
+
+###Obter alertas por nome
+GET {{base}}/name/ana?size=1&page=2&sort=name,asc
+
+###Criar um alerta
+POST {{base}}
+Content-Type: application/json
+
+{
+    "name": "Antonio Carlos",
+    "email": "antoniocarlos@gmail.com",
+    "password": "123456",
+    "birth": "1995-08-25"
+
+}
+
+### Atualizar um alerta
+PUT {{base}}/15
+Content-Type: application/json
+
+{
+    "name": "Antonio Olimpio",
+    "email": "netinhoalj@gmail.com",
+    "password": "123456",
+    "birth": "1992-03-25"
+
+}
+
+###Deletar um alerta
+DELETE {{base}}/1

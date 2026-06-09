@@ -1,0 +1,39 @@
+#Testes Com Usuarios
+
+@base = http://localhost:8080/user
+
+### Obter um usuario
+GET {{base}}/1
+
+###Obter todos os usuarios
+GET {{base}}
+
+###Obter usuarios por nome
+GET {{base}}/name/ana?size=1&page=2&sort=name,asc
+
+###Criar um usuario
+POST {{base}}
+Content-Type: application/json
+
+{
+    "name": "Antonio Carlos",
+    "email": "antoniocarlos@gmail.com",
+    "password": "123456",
+    "birth": "1995-08-25"
+
+}
+
+### Atualizar um usuario
+PUT {{base}}/15
+Content-Type: application/json
+
+{
+    "name": "Antonio Olimpio",
+    "email": "netinhoalj@gmail.com",
+    "password": "123456",
+    "birth": "1992-03-25"
+
+}
+
+###Deletar um usuario
+DELETE {{base}}/1
