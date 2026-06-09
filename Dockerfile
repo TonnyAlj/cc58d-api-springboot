@@ -1,5 +1,5 @@
 # Etapa 1: Build da aplicação
-FROM maven:3    -eclipse-temurin-25-alpine AS builder
+FROM maven:3-eclipse-temurin-25-alpine AS builder
 
 WORKDIR /app
 COPY pom.xml .
