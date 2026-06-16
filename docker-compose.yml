@@ -1,0 +1,16 @@
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webapp
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - devops_SpringBoot_net
+
+networks:
+  devops_SpringBoot_net:
+    name: devops_SpringBoot_net
+    external: true
