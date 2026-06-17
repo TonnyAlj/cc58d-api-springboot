@@ -1,9 +1,9 @@
 services:
-  webapp:
+  springboot_api:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: webapp
+    container_name: springboot_api
     restart: unless-stopped
     ports:
       - "8080:8080"
